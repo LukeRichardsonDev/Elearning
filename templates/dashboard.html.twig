@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class='col-md-12 mt-3 text-center'>Dashboard</h1>
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class='create-container'>
+            <div class="row mt-4 mb-4">
+                <a href="{{ path('register') }}" class='col-md-6 text-center'>Create Student</a>
+                <a href="#" class='course-create col-md-6 text-center'>Create Course</a>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class='sign-out row mt-4 mb-4'>
+        <a href="{{ path('logout') }}" class="col-md-12 text-center"><p>Logout</p></a>
+    </div>
+{% endblock body %}
+
+{% block javascripts %}
+<script src="{{ asset('build/create-course.js') }}"></script>
+{% endblock javascripts %}

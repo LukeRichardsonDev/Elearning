@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class='col-md-12 mt-4 text-center'>Register</h1>
+
+    <div class='mt-4'>
+        {% form_theme form 'bootstrap_4_layout.html.twig' %}
+        {{ form_start(form) }}
+            {{ form_row(form.userName) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.plainPassword.first) }}
+            {{ form_row(form.plainPassword.second) }}
+            {{ form_row(form.firstName) }}
+            {{ form_row(form.lastName) }}
+            {{ form_row(form.tutor) }}
+
+            <div class='row justify-content-center mb-5'>
+                <button class='btn btn-primary' type="submit">Register!</button>
+            </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock body %}

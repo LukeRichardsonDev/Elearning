@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class='introduction mt-5'>
+        <h1 class="text-center">Welcome to elearning</h1>
+        <p class="col-md-8 offset-md-2 text-center mt-4 mb-4">Your new home for online education</p>
+    </div>
+
+    <div class='sign-in row'>
+        <a href="{{ path('login') }}" class="text-center col-md-6"><p>Sign In</p></a>
+        <a href="{{ path('register') }}" class="text-center col-md-6"><p>Sign Up</p></a>
+    </div>
+{% endblock body %}

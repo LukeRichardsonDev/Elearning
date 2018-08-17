@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Elearning{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    <link href="build/app.css" rel="stylesheet">
+    </head>
+    <body class="container">
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        <script src="{{ asset('build/app.js') }}"></script>
+    </body>
+</html>

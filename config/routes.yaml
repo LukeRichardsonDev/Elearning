@@ -1,0 +1,22 @@
+home:
+    path: /
+    controller: App\Controller\HomeController:indexAction
+
+register:
+    path: /register
+    controller: App\Controller\RegistrationController:registerAction
+
+login:
+    path: /login
+    controller: App\Controller\SecurityController:loginAction
+
+logout:
+    path: /logout
+
+dashboard:
+    path: /dashboard
+    controller: App\Controller\HomeController:dashboardAction
+
+create_course:
+    path: /create-course
+    controller: App\Controller\CourseController:createCourseAction

@@ -1,0 +1,14 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{{ form_start(form, {'attr': {'id': 'create_course'}}) }}
+    {{ form_row(form.courseName) }}
+    {{ form_row(form.description) }}
+
+    <h3>Content</h3>
+    <ul class="content" data-prototype="{{ form_widget(form.content.vars.prototype)|e('html_attr') }}">
+        {% for content in form.content %}
+            <li>{{ form_row(content.content) }}</li>
+        {% endfor %}
+    </ul>
+
+    <button id="save" type="button">Save</button>
+{{ form_end(form, {'render_rest': false}) }}
